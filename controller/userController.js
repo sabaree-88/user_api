@@ -6,7 +6,7 @@ export const getUsers = async (req, res) => {
     if (!result) {
       return res.status(400).json({ message: "Error find the users" });
     }
-    return res.status(200).json({ data: result });
+    return res.status(200).json(result);
   } catch (error) {
     res.status(400).json({ message: "Error get the users" });
   }
@@ -19,7 +19,7 @@ export const getUsersById = async (req, res) => {
     if (!result) {
       return res.status(400).json({ message: "Error find the users" });
     }
-    return res.status(200).json({ data: result });
+    return res.status(200).json(result);
   } catch (error) {
     res.status(400).json({ message: "Error find the users" });
   }
